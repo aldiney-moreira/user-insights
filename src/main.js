@@ -13,7 +13,9 @@ import App from "./App.vue";
 // Composables
 import { createApp } from "vue";
 
-const app = createApp(App);
+import store from './store'
+
+const app = createApp(App).use(store);
 
 registerPlugins(app);
 
