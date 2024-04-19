@@ -56,6 +56,9 @@
       <v-btn v-on:click="addUser" type="submit" class="btn btn-primary"
         >Adicionar</v-btn
       >
+      <v-snackbar v-model="showSuccessSnackbar" color="success" timeout="2000">
+        Usuário cadastrado com sucesso!
+      </v-snackbar>
     </v-form>
   </v-container>
 </template>
@@ -114,6 +117,7 @@ export default {
     neighborhood: "",
     city: "",
     state: "",
+    showSuccessSnackbar: false,
   }),
   computed: {
     fields() {
@@ -141,14 +145,16 @@ export default {
           };
           this.$store.commit("addUser", newUser);
 
-          this.fullName = "";
-          this.email = "";
+          this.fullName = null;
+          this.email = null;
           this.origin = null;
-          this.cep = "";
-          this.publicPlace = "";
-          this.neighborhood = "";
-          this.city = "";
-          this.state = "";
+          this.cep = null;
+          this.publicPlace = null;
+          this.neighborhood = null;
+          this.city = null;
+          this.state = null;
+
+          this.showSuccessSnackbar = true;
         }
       });
     },
