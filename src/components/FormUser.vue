@@ -1,5 +1,5 @@
 <template>
-  <v-container class="w-25">
+  <v-container>
     <v-form fast-fail @submit.prevent ref="form">
       <v-text-field
         v-model="fullName"

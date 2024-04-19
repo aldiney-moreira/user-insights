@@ -1,19 +1,21 @@
 <template>
-  <v-container class="w-50">
-    <h1 class="text-h2 text-center font-weight-bold mb-5">User Insights</h1>
+  <v-container>
+    <div class="container">
+      <h1 class="text-h2 text-center font-weight-bold mb-5">User Insights</h1>
 
-    <p class="mb-10">
-      Bem-vindo ao <strong>User Insights</strong>, um site que permite adicionar
-      usuários e tomar decisões com base em dados. Nossa plataforma oferece três
-      principais funcionalidades:
-    </p>
+      <p class="mb-10">
+        Bem-vindo ao <strong>User Insights</strong>, um site que permite
+        adicionar usuários e tomar decisões com base em dados. Nossa plataforma
+        oferece três principais funcionalidades:
+      </p>
 
-    <div class="d-flex flex-column">
-      <FeatureCard
-        v-for="(feature, index) in features"
-        :key="index"
-        :feature="feature"
-      />
+      <div class="d-flex flex-column">
+        <FeatureCard
+          v-for="(feature, index) in features"
+          :key="index"
+          :feature="feature"
+        />
+      </div>
     </div>
   </v-container>
 </template>
@@ -56,7 +58,18 @@ export default {
 </script>
 
 <style>
+.container {
+  width: 100%;
+}
+
 .d-flex {
   gap: 20px;
+}
+
+@media (min-width: 960px) {
+  .container {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 </style>
