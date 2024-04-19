@@ -34,11 +34,31 @@ export default createStore({
         estado: "AM",
       },
     ],
+    origin: {
+      physical: 2,
+      digital: 1,
+    },
   },
   getters: {},
   mutations: {
     addUser(state, data) {
       state.users.push(data);
+      this.commit("sumOrigin");
+    },
+
+    sumOrigin(state) {
+      state.origin.physical = 0;
+      state.origin.digital = 0;
+
+      state.users.forEach((element) => {
+        if (element.origem.toLowerCase() === "físico") {
+          state.origin.physical += 1;
+        }
+
+        if (element.origem.toLowerCase() === "digital") {
+          state.origin.digital += 1;
+        }
+      });
     },
   },
   actions: {},
