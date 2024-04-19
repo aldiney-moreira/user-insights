@@ -1,6 +1,5 @@
 <template>
-  <Form />
-  <UsersList />
+  <FormUser />
 </template>
 
 <script setup>

@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="d-flex justify-center align-center">
     <canvas class="w-25 h-25" id="myChart"></canvas>
   </v-container>
 </template>

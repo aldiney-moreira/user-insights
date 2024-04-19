@@ -1,105 +1,64 @@
 <template>
-  <v-container>
+  <v-container class="w-25">
     <v-form fast-fail @submit.prevent ref="form">
-      <v-row>
-        <v-col cols="12" md="4">
-          <v-text-field
-            v-model="fullName"
-            :counter="30"
-            :rules="fullNameRules"
-            label="Nome completo"
-            required
-          ></v-text-field>
-        </v-col>
+      <v-text-field
+        v-model="fullName"
+        :counter="30"
+        :rules="fullNameRules"
+        label="Nome completo"
+        required
+      ></v-text-field>
 
-        <v-col cols="12" md="4">
-          <v-text-field
-            v-model="email"
-            :rules="emailRules"
-            type="email"
-            label="E-mail"
-            required
-          ></v-text-field>
-        </v-col>
+      <v-text-field
+        v-model="email"
+        :rules="emailRules"
+        type="email"
+        label="E-mail"
+        required
+      ></v-text-field>
 
-        <v-col cols="12" md="2">
-          <v-select
-            v-model="origin"
-            :items="originItems"
-            label="Origem"
-            required
-          ></v-select>
-        </v-col>
+      <v-select
+        v-model="origin"
+        :items="originItems"
+        label="Origem"
+        required
+      ></v-select>
 
-        <v-col cols="12" md="2">
-          <v-text-field
-            v-model="cep"
-            :counter="8"
-            :rules="cepRules"
-            type="number"
-            label="CEP"
-            number
-            required
-            @input="searchAddress"
-            class="no-spinners"
-          ></v-text-field>
-        </v-col>
-      </v-row>
+      <v-text-field
+        v-model="cep"
+        :counter="8"
+        :rules="cepRules"
+        type="number"
+        label="CEP"
+        number
+        required
+        @input="searchAddress"
+        class="no-spinners"
+      ></v-text-field>
 
-      <v-row>
-        <v-col cols="12" md="3">
-          <v-text-field
-            v-model="publicPlace"
-            label="Logradouro"
-            required
-            readonly
-          >
-            <v-tooltip
-              v-if="!cepLengthValid"
-              activator="parent"
-              location="bottom"
-            >
-              Preencha o CEP.
-            </v-tooltip>
-          </v-text-field>
-        </v-col>
+      <v-text-field v-model="publicPlace" label="Logradouro" required readonly>
+        <v-tooltip v-if="!cepLengthValid" activator="parent" location="bottom">
+          Preencha o CEP.
+        </v-tooltip>
+      </v-text-field>
 
-        <v-col cols="12" md="3">
-          <v-text-field v-model="neighborhood" label="Bairro" required readonly>
-            <v-tooltip
-              v-if="!cepLengthValid"
-              activator="parent"
-              location="bottom"
-            >
-              Preencha o CEP.
-            </v-tooltip>
-          </v-text-field>
-        </v-col>
+      <v-text-field v-model="neighborhood" label="Bairro" required readonly>
+        <v-tooltip v-if="!cepLengthValid" activator="parent" location="bottom">
+          Preencha o CEP.
+        </v-tooltip>
+      </v-text-field>
 
-        <v-col cols="12" md="3">
-          <v-text-field v-model="city" label="Cidade" required readonly>
-            <v-tooltip
-              v-if="!cepLengthValid"
-              activator="parent"
-              location="bottom"
-            >
-              Preencha o CEP.
-            </v-tooltip>
-          </v-text-field>
-        </v-col>
+      <v-text-field v-model="city" label="Cidade" required readonly>
+        <v-tooltip v-if="!cepLengthValid" activator="parent" location="bottom">
+          Preencha o CEP.
+        </v-tooltip>
+      </v-text-field>
 
-        <v-col cols="12" md="3">
-          <v-text-field v-model="state" label="Estado" required readonly>
-            <v-tooltip
-              v-if="!cepLengthValid"
-              activator="parent"
-              location="bottom"
-            >
-              Preencha o CEP.
-            </v-tooltip>
-          </v-text-field>
-        </v-col>
-      </v-row>
+      <v-text-field v-model="state" label="Estado" required readonly>
+        <v-tooltip v-if="!cepLengthValid" activator="parent" location="bottom">
+          Preencha o CEP.
+        </v-tooltip>
+      </v-text-field>
 
       <v-btn v-on:click="addUser" type="submit" class="btn btn-primary"
         >Adicionar</v-btn

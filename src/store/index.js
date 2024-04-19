@@ -39,7 +39,6 @@ export default createStore({
       digital: 1,
     },
   },
-  getters: {},
   mutations: {
     addUser(state, data) {
       state.users.push(data);
@@ -61,6 +60,7 @@ export default createStore({
       });
     },
   },
+  getters: {},
   actions: {},
   modules: {},
 });
