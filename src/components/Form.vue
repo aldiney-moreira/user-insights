@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-form fast-fail @submit.prevent ref="form" v-model="valid">
+    <v-form fast-fail @submit.prevent ref="form">
       <v-row>
         <v-col cols="12" md="4">
           <v-text-field
@@ -26,7 +26,6 @@
           <v-select
             v-model="origin"
             :items="originItems"
-            :rules="originRules"
             label="Origem"
             required
           ></v-select>
