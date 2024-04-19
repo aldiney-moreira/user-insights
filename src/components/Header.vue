@@ -12,26 +12,10 @@
 
     <v-navigation-drawer v-model="drawer" app>
       <v-list>
-        <router-link to="/">
-          <v-list-item link>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-        </router-link>
-        <router-link to="/formulario">
-          <v-list-item link>
-            <v-list-item-title>Formulário</v-list-item-title>
-          </v-list-item>
-        </router-link>
-        <router-link to="/usuarios">
-          <v-list-item link>
-            <v-list-item-title>Usuários</v-list-item-title>
-          </v-list-item>
-        </router-link>
-        <router-link to="/relatorio">
-          <v-list-item link>
-            <v-list-item-title>Relatório</v-list-item-title>
-          </v-list-item>
-        </router-link>
+        <NavigationItem to="/">Home</NavigationItem>
+        <NavigationItem to="/formulario">Formulário</NavigationItem>
+        <NavigationItem to="/usuarios">Usuários</NavigationItem>
+        <NavigationItem to="/relatorio">Relatório</NavigationItem>
       </v-list>
     </v-navigation-drawer>
   </v-container>

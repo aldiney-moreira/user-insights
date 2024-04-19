@@ -36,29 +36,22 @@
         class="no-spinners"
       ></v-text-field>
 
-      <v-text-field v-model="publicPlace" label="Logradouro" required readonly>
-        <v-tooltip v-if="!cepLengthValid" activator="parent" location="bottom">
-          Preencha o CEP.
-        </v-tooltip>
-      </v-text-field>
-
-      <v-text-field v-model="neighborhood" label="Bairro" required readonly>
-        <v-tooltip v-if="!cepLengthValid" activator="parent" location="bottom">
-          Preencha o CEP.
-        </v-tooltip>
-      </v-text-field>
-
-      <v-text-field v-model="city" label="Cidade" required readonly>
-        <v-tooltip v-if="!cepLengthValid" activator="parent" location="bottom">
-          Preencha o CEP.
-        </v-tooltip>
-      </v-text-field>
-
-      <v-text-field v-model="state" label="Estado" required readonly>
-        <v-tooltip v-if="!cepLengthValid" activator="parent" location="bottom">
-          Preencha o CEP.
-        </v-tooltip>
-      </v-text-field>
+      <template v-for="(field, index) in fields" :key="index">
+        <v-text-field
+          v-model="field.model"
+          :label="field.label"
+          :required="field.required"
+          readonly
+        >
+          <v-tooltip
+            v-if="!cepLengthValid"
+            activator="parent"
+            location="bottom"
+          >
+            Preencha o CEP.
+          </v-tooltip>
+        </v-text-field>
+      </template>
 
       <v-btn v-on:click="addUser" type="submit" class="btn btn-primary"
         >Adicionar</v-btn
@@ -122,6 +115,16 @@ export default {
     city: "",
     state: "",
   }),
+  computed: {
+    fields() {
+      return [
+        { model: this.publicPlace, label: "Logradouro", required: true },
+        { model: this.neighborhood, label: "Bairro", required: true },
+        { model: this.city, label: "Cidade", required: true },
+        { model: this.state, label: "Estado", required: true },
+      ];
+    },
+  },
   methods: {
     addUser() {
       this.$refs.form.validate().then((result) => {

@@ -7,51 +7,53 @@
       usuários e tomar decisões com base em dados. Nossa plataforma oferece três
       principais funcionalidades:
     </p>
+
     <div class="d-flex flex-column">
-      <v-card class="pa-7">
-        <v-card-title>
-          <h2>Formulário</h2>
-        </v-card-title>
-        <v-card-text>
-          <p class="font-weight-regular">
-            Use este formulário para adicionar novos usuários à lista. Capture
-            informações relevantes, como nome, e-mail e outras características
-            importantes. Acesse em:
-            <router-link to="/formulario">Formulário </router-link>
-          </p>
-        </v-card-text>
-      </v-card>
-
-      <v-card class="pa-7">
-        <v-card-title>
-          <h2>Usuários</h2>
-        </v-card-title>
-        <v-card-text>
-          <p class="font-weight-regular">
-            Visualize a lista de usuários cadastrados. Veja detalhes como nome,
-            email, origem, CEP e outras informações relevantes. Acesse em:
-            <router-link to="/usuarios"> Usuários </router-link>
-          </p>
-        </v-card-text>
-      </v-card>
-
-      <v-card class="pa-7">
-        <v-card-title>
-          <h2>Relatório</h2>
-        </v-card-title>
-        <v-card-text>
-          <p class="font-weight-regular">
-            O relatório apresenta gráfico(s) com base nos dados dos usuários.
-            Use essas informações para tomar decisões informadas. Acesse em:
-            <router-link to="/relatorio"> Relatório </router-link>
-          </p>
-        </v-card-text>
-      </v-card>
+      <FeatureCard
+        v-for="(feature, index) in features"
+        :key="index"
+        :feature="feature"
+      />
     </div>
   </v-container>
 </template>
 
-<script></script>
+<script>
+import FeatureCard from "@/components/FeatureCard.vue";
+
+export default {
+  components: {
+    FeatureCard,
+  },
+  data() {
+    return {
+      features: [
+        {
+          title: "Formulário",
+          description:
+            "Use este formulário para adicionar novos usuários à lista. Capture informações relevantes, como nome, e-mail e outras características importantes.",
+          link: "/formulario",
+          linkText: "Formulário",
+        },
+        {
+          title: "Usuários",
+          description:
+            "Visualize a lista de usuários cadastrados. Veja detalhes como nome, email, origem, CEP e outras informações relevantes.",
+          link: "/usuarios",
+          linkText: "Usuários",
+        },
+        {
+          title: "Relatório",
+          description:
+            "O relatório apresenta gráfico(s) com base nos dados dos usuários. Use essas informações para tomar decisões informadas.",
+          link: "/relatorio",
+          linkText: "Relatório",
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <style>
 .d-flex {
