@@ -130,7 +130,7 @@ export default {
       this.$refs.form.validate().then((result) => {
         if (result.valid) {
           const newUser = {
-            nome: this.fullName,
+            nome: this.capitalizeEachWord(this.fullName),
             email: this.email,
             origem: this.origin,
             cep: this.cep,
@@ -151,6 +151,19 @@ export default {
           this.state = "";
         }
       });
+    },
+    capitalizeEachWord(str) {
+      return str
+        .toLowerCase()
+        .split(" ")
+        .map((word) => {
+          if (word.length > 3) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+          } else {
+            return word;
+          }
+        })
+        .join(" ");
     },
     searchAddress() {
       if (this.cep.length === 8) {
