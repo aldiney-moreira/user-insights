@@ -18,6 +18,9 @@ npm install
 ```bash
 npm run build
 ```
+```bash
+npm run preview
+```
 
 ## Funcionalidades Principais
 - [x] Criar um formulário para cadastrar usuários.
