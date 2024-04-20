@@ -10,12 +10,13 @@ Bem-vindo ao meu teste técnico! Este repositório contém a implementação de 
 - Chart JS
 
 ## Configuração do projeto
+> Node version: v18.17.0
 ### Scripts
 ```bash
 npm install
 ```
 ```bash
-npm run dev
+npm run build
 ```
 
 ## Funcionalidades Principais
