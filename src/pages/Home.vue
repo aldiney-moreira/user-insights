@@ -57,7 +57,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .container {
   width: 100%;
 }
@@ -68,7 +68,7 @@ export default {
 
 @media (min-width: 960px) {
   .container {
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
   }
 }

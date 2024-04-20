@@ -9,14 +9,14 @@
 //
 </script>
 
-<style>
+<style scoped>
 .container {
   width: 100%;
 }
 
 @media (min-width: 960px) {
   .container {
-    width: 25%;
+    max-width: 50%;
     margin: 0 auto;
   }
 }
