@@ -9,6 +9,15 @@ Bem-vindo ao meu teste técnico! Este repositório contém a implementação de 
 - Vue Router
 - Chart JS
 
+## Configuração do projeto
+### Scripts
+```bash
+npm install
+```
+```bash
+npm run dev
+```
+
 ## Funcionalidades Principais
 - [x] Criar um formulário para cadastrar usuários.
 - [ ] Apresentar um resumo da distribuição dos usuários por estado.
