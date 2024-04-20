@@ -1,80 +1,57 @@
-# Vuetify (Default)
+# User Insights
 
-This is the official scaffolding tool for Vuetify, designed to give you a head start in building your new Vuetify application. It sets up a base template with all the necessary configurations and standard directory structure, enabling you to begin development without the hassle of setting up the project from scratch.
+Bem-vindo ao meu teste técnico! Este repositório contém a implementação de um sistema de cadastro e análise de usuários.
 
-## ❗️ Important Links
+## Tecnologias utilizadas
+- Vue JS
+- Vuetify
+- Vuex
+- Vue Router
+- Chart JS
 
-- 📄 [Docs](https://vuetifyjs.com/)
-- 🚨 [Issues](https://issues.vuetifyjs.com/)
-- 🏬 [Store](https://store.vuetifyjs.com/)
-- 🎮 [Playground](https://play.vuetifyjs.com/)
-- 💬 [Discord](https://community.vuetifyjs.com)
-
-## 💿 Install
-
-Set up your project using your preferred package manager. Use the corresponding command to install the dependencies:
-
-| Package Manager                                           | Command        |
-| --------------------------------------------------------- | -------------- |
-| [yarn](https://yarnpkg.com/getting-started)               | `yarn install` |
-| [npm](https://docs.npmjs.com/cli/v7/commands/npm-install) | `npm install`  |
-| [pnpm](https://pnpm.io/installation)                      | `pnpm install` |
-| [bun](https://bun.sh/#getting-started)                    | `bun install`  |
-
-After completing the installation, your environment is ready for Vuetify development.
-
-## ✨ Features
-
-- 🖼️ **Optimized Front-End Stack**: Leverage the latest Vue 3 and Vuetify 3 for a modern, reactive UI development experience. [Vue 3](https://v3.vuejs.org/) | [Vuetify 3](https://vuetifyjs.com/en/)
-- 🗃️ **State Management**: Integrated with [Pinia](https://pinia.vuejs.org/), the intuitive, modular state management solution for Vue.
-- 🚦 **Routing and Layouts**: Utilizes Vue Router for SPA navigation and vite-plugin-vue-layouts for organizing Vue file layouts. [Vue Router](https://router.vuejs.org/) | [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
-- ⚡ **Next-Gen Tooling**: Powered by Vite, experience fast cold starts and instant HMR (Hot Module Replacement). [Vite](https://vitejs.dev/)
-- 🧩 **Automated Component Importing**: Streamline your workflow with unplugin-vue-components, automatically importing components as you use them. [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
-
-These features are curated to provide a seamless development experience from setup to deployment, ensuring that your Vuetify application is both powerful and maintainable.
-
-## 💡 Usage
-
-This section covers how to start the development server and build your project for production.
-
-### Starting the Development Server
-
-To start the development server with hot-reload, run the following command. The server will be accessible at [http://localhost:3000](http://localhost:3000):
-
+## Configuração do projeto
+> Node version: v18.17.0
+### Scripts
 ```bash
-yarn dev
+npm install
+```
+```bash
+npm run build
+```
+```bash
+npm run preview
 ```
 
-(Repeat for npm, pnpm, and bun with respective commands.)
+## Funcionalidades Principais
+- [x] Criar um formulário para cadastrar usuários.
+- [ ] Apresentar um resumo da distribuição dos usuários por estado.
+- [X] Apresentar um resumo da distribuição dos usuários por origem.
+- [X] Apresentar uma tabela com todos os usuários cadastrados.
+- [X] Bônus: Utilizar uma biblioteca para state management, como Vuex ou Pinia.
 
-> Add NODE_OPTIONS='--no-warnings' to suppress the JSON import warnings that happen as part of the Vuetify import mapping. If you are on Node [v21.3.0](https://nodejs.org/en/blog/release/v21.3.0) or higher, you can change this to NODE_OPTIONS='--disable-warning=5401'. If you don't mind the warning, you can remove this from your package.json dev script.
+## Melhorias futuras
+- [ ] Criar testes automatizados.
+- [ ] Salvar usuários no localStorage.
+- [ ] Permitir editar e excluir item.
+- [ ] Fazer paginação da tabela de usuários.
+- [ ] Fazer máscara para o input do CEP.
 
-### Building for Production
+## Detalhes do projeto
+- O projeto conta com navegação entre as páginas usando Vue Router.
+- Ao cadastrar um usuário pelo formulário, os dados refletem na tabela e no gráfico.
+- No formulário basta preencher o CEP que os outros campos são preenchidos automaticamente.
 
-To build your project for production, use:
+## Processo de aprendizagem
+Ao aprender algo novo, gosto sempre de ver uma breve introdução à tecnologia, normalmente no YouTube. Após essa contextualização ao tema, parto para vídeos/publicações curtas fazendo algo e faço junto para ir me adaptando à sintaxe. Após isso, tento fazer algo sozinho, planejando o que deve ser feito.
 
-```bash
-yarn build
-```
+Nesse teste passei um bom tempo planejando como faria as coisas e quais tecnologias deveria usar, por fim acabei escolhendo me desafiar para aprender novas ferramentas como: Vuex, Vue Router e Chart JS. E com a ajuda da documentação e pesquisas consegui fazer o que eu queria.
 
-(Repeat for npm, pnpm, and bun with respective commands.)
+### O que eu aprendi
+Apesar de já ter uma certa experiência com Vue, ela foi breve, então foi como se estivesse aprendendo de novo, mas o Vuetify auxiliou muito. Como ele se parece muito com o Material UI que já utilizei em React, foi fácil criar os componentes, usando a documentação como base. 
 
-Once the build process is completed, your application will be ready for deployment in a production environment.
+Fazer rotas com Vue também é muito parecido com React, então bastava entender a estrutura usando a própria documentação. Já o Vuex foi um pequeno desafio, apesar de ser muito parecido com o Redux, fazia certo tempo que não usava, então foi uma ótima oportunidade para relembrar a fazer gerenciamento de estado.
 
-## 💪 Support Vuetify Development
+### Minhas dificuldades
+Minha maior dificuldade foi com certeza a utilização da biblioteca Chart JS. Como não estava muito familiarizado com Vue e não conhecia o Vuex, acabei com problemas para fazer com que os dados que estivem no estado (users) ao serem atualizados refletissem no gráfico.
 
-This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library with a comprehensive collection of Vue components. Vuetify is an MIT licensed Open Source project that has been made possible due to the generous contributions by our [sponsors and backers](https://vuetifyjs.com/introduction/sponsors-and-backers/). If you are interested in supporting this project, please consider:
-
-- [Requesting Enterprise Support](https://support.vuetifyjs.com/)
-- [Sponsoring John on Github](https://github.com/users/johnleider/sponsorship)
-- [Sponsoring Kael on Github](https://github.com/users/kaelwd/sponsorship)
-- [Supporting the team on Open Collective](https://opencollective.com/vuetify)
-- [Becoming a sponsor on Patreon](https://www.patreon.com/vuetify)
-- [Becoming a subscriber on Tidelift](https://tidelift.com/subscription/npm/vuetify)
-- [Making a one-time donation with Paypal](https://paypal.me/vuetify)
-
-## 📑 License
-
-[MIT](http://opensource.org/licenses/MIT)
-
-Copyright (c) 2016-present Vuetify, LLC
+E para resolver isso criei o método `updateChart()` para atualizar os dados do gráfico com os valores mais recentes desse estado e chamei o método `update()` do Chart.js. Além disso, configurei um `watcher` para o estado origin, acionando o método `updateChart()` sempre que o estado fosse modificado.
