@@ -96,7 +96,7 @@ export default {
         return "E-mail deve ser válido.";
       },
     ],
-    origin: null,
+    origin: "",
     originItems: ["Digital", "Físico"],
     cep: "",
     cepLengthValid: false,
