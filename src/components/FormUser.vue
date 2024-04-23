@@ -79,7 +79,7 @@ export default {
         return "O nome deve ter menos de 30 caracteres.";
       },
       (value) => {
-        if (/^\D*$/u.test(value)) return true;
+        if (/^[a-záàâãéèêíïóôõöúçñ]+$/i.test(value)) return true;
         return "O nome deve conter apenas letras.";
       },
     ],
