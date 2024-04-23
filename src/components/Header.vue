@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-app-bar app floating class="border-b" dense>
+    <v-app-bar class="border-b">
       <v-container class="py-0 d-flex align-center">
         <v-icon @click.stop="drawer = !drawer" v-if="!drawer">
           mdi-menu
@@ -10,18 +10,20 @@
       </v-container>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" app>
+    <v-navigation-drawer v-model="drawer">
       <v-list>
-        <NavigationItem to="/">Home</NavigationItem>
-        <NavigationItem to="/formulario">Formulário</NavigationItem>
-        <NavigationItem to="/usuarios">Usuários</NavigationItem>
-        <NavigationItem to="/relatorio">Relatório</NavigationItem>
+        <NavigationItem to="/" title="Home" />
+        <NavigationItem to="/formulario" title="Formulário" />
+        <NavigationItem to="/usuarios" title="Usuários" />
+        <NavigationItem to="/relatorio" title="Relatório" />
       </v-list>
     </v-navigation-drawer>
   </v-container>
 </template>
 
 <script>
+import NavigationItem from "@/components/NavigationItem";
+
 export default {
   data() {
     return {
