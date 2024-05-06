@@ -3,7 +3,7 @@
 Bem-vindo ao meu teste técnico! Este repositório contém a implementação de um sistema de cadastro e análise de usuários.
 
 ## Tecnologias utilizadas
-- Vue JS
+- Vue
 - Vuetify
 - Vuex
 - Vue Router
@@ -33,7 +33,7 @@ npm run preview
 - [ ] Criar testes automatizados.
 - [ ] Salvar usuários no localStorage.
 - [ ] Permitir editar e excluir item.
-- [ ] Fazer paginação da tabela de usuários.
+- [X] Fazer paginação da tabela de usuários.
 - [ ] Fazer máscara para o input do CEP.
 
 ## Detalhes do projeto
