@@ -47,7 +47,7 @@ Ao aprender algo novo, gosto sempre de ver uma breve introdução à tecnologia,
 Nesse teste passei um bom tempo planejando como faria as coisas e quais tecnologias deveria usar, por fim acabei escolhendo me desafiar para aprender novas ferramentas como: Vuex, Vue Router e Chart JS. E com a ajuda da documentação e pesquisas consegui fazer o que eu queria.
 
 ### O que eu aprendi
-Apesar de já ter uma certa experiência com Vue, ela foi breve, então foi como se estivesse aprendendo de novo, mas o Vuetify auxiliou muito. Como ele se parece muito com o Material UI que já utilizei em React, foi fácil criar os componentes, usando a documentação como base. 
+Apesar de já ter uma certa experiência com Vue, ela foi breve, então foi como se estivesse aprendendo de novo, mas o Vuetify auxiliou muito. Como ele se parece muito com o Material UI que já utilizei no React, foi fácil criar os componentes, usando a documentação como base. 
 
 Fazer rotas com Vue também é muito parecido com React, então bastava entender a estrutura usando a própria documentação. Já o Vuex foi um pequeno desafio, apesar de ser muito parecido com o Redux, fazia certo tempo que não usava, então foi uma ótima oportunidade para relembrar a fazer gerenciamento de estado.
 
