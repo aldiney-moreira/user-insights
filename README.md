@@ -30,10 +30,10 @@ npm run preview
 - [X] Bônus: Utilizar uma biblioteca para state management, como Vuex ou Pinia.
 
 ## Melhorias futuras
+- [X] Fazer paginação da tabela de usuários.
 - [ ] Criar testes automatizados.
 - [ ] Salvar usuários no localStorage.
 - [ ] Permitir editar e excluir item.
-- [X] Fazer paginação da tabela de usuários.
 - [ ] Fazer máscara para o input do CEP.
 
 ## Detalhes do projeto
