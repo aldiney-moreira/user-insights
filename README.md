@@ -49,7 +49,7 @@ Nesse teste passei um bom tempo planejando como faria as coisas e quais tecnolog
 ### O que eu aprendi
 Apesar de já ter uma certa experiência com Vue, ela foi breve, então foi como se estivesse aprendendo de novo, mas o Vuetify auxiliou muito. Como ele se parece muito com o Material UI que já utilizei no React, foi fácil criar os componentes, usando a documentação como base. 
 
-Fazer rotas com Vue também é muito parecido com React, então bastava entender a estrutura usando a própria documentação. Já o Vuex foi um pequeno desafio, apesar de ser muito parecido com o Redux, fazia certo tempo que não usava, então foi uma ótima oportunidade para relembrar a fazer gerenciamento de estado.
+Fazer rotas com Vue também é muito parecido com React, então bastava entender a estrutura usando a própria documentação. Já o Vuex foi um pequeno desafio, apesar de ser muito parecido com o Redux, fazia certo tempo que não usava ele, então foi uma ótima oportunidade para relembrar a fazer gerenciamento de estado.
 
 ### Minhas dificuldades
 Minha maior dificuldade foi com certeza a utilização da biblioteca Chart JS. Como não estava muito familiarizado com Vue e não conhecia o Vuex, acabei com problemas para fazer com que os dados que estivem no estado (users) ao serem atualizados refletissem no gráfico.
